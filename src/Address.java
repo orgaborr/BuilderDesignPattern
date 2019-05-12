@@ -12,6 +12,22 @@ public class Address {
 		this.city = builder.city;
 	}
 	
+	public int getHouseNumber() {
+		return houseNumber;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public String getZipCode() {
+		return zipCode;
+	}
+
+	public String getCity() {
+		return city;
+	}
+	
 	public static class Builder {
 		private int houseNumber;
 		private String street;
@@ -42,21 +58,4 @@ public class Address {
 			return new Address(this);
 		}
 	}
-	
-	public int getHouseNumber() {
-		return houseNumber;
-	}
-
-	public String getStreet() {
-		return street;
-	}
-
-	public String getZipCode() {
-		return zipCode;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
 }

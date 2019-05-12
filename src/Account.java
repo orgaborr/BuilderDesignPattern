@@ -12,6 +12,22 @@ public class Account {
 		this.name = builder.name;
 	}
 	
+	public int getId() {
+		return id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public Name getName() {
+		return name;
+	}
+	
 	//public static inner class
 	public static class Builder {
 		private int id;
@@ -42,21 +58,5 @@ public class Account {
 		public Account build() {
 			return new Account(this);
 		}
-	}
-	
-	public int getId() {
-		return id;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public Address getAddress() {
-		return address;
-	}
-
-	public Name getName() {
-		return name;
 	}
 }

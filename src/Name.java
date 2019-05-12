@@ -1,19 +1,38 @@
-import java.util.List;
+//import java.util.List;
 
 public class Name {
 	private final String firstName;
-	private final List<String> middleNames;
+//	private final List<String> middleNames;
+	private String middleName;
 	private final String lastName;
 	
 	private Name(Builder builder) {
 		this.firstName = builder.firstName;
-		this.middleNames = builder.middleNames;
+//		this.middleNames = builder.middleNames;
+		this.middleName = builder.middleName;
 		this.lastName = builder.lastName;
+	}
+	
+	public String getFirstName() {
+		return firstName;
+	}
+
+//	public List<String> getMiddleNames() {
+//		return middleNames;
+//	}
+	
+	public String getMiddleName() {
+		return middleName;
+	}
+
+	public String getLastName() {
+		return lastName;
 	}
 	
 	public static class Builder {
 		private String firstName;
-		private List<String> middleNames;
+//		private List<String> middleNames;
+		private String middleName;
 		private String lastName;
 		
 		public Builder firstName(final String firstName) {
@@ -21,8 +40,13 @@ public class Name {
 			return this;
 		}
 		
-		public Builder middleNames(final List<String> middleNames) {
-			this.middleNames = middleNames;
+//		public Builder middleNames(final List<String> middleNames) {
+//			this.middleNames = middleNames;
+//			return this;
+//		}
+		
+		public Builder middleName(final String middleName) {
+			this.middleName = middleName;
 			return this;
 		}
 		
@@ -35,17 +59,4 @@ public class Name {
 			return new Name(this);
 		}
 	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public List<String> getMiddleNames() {
-		return middleNames;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-	
 }
