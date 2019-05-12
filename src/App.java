@@ -1,11 +1,10 @@
 
-import java.util.List;
-
 public class App {
 
 	public static void main(String[] args) {
 		
-		new Name.Builder().firstName("Gabor").middleNames(List.of("Bernat")).
+		//in case of List type middleName: middleNames(ImmutableList.of("Bernat"))
+		new Name.Builder().firstName("Gabor").middleName("Bernat").surname("Orban").build();
 
 	}
 

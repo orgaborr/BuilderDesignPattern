@@ -4,13 +4,13 @@ public class Name {
 	private final String firstName;
 //	private final List<String> middleNames;
 	private String middleName;
-	private final String lastName;
+	private final String surname;
 	
 	private Name(Builder builder) {
 		this.firstName = builder.firstName;
 //		this.middleNames = builder.middleNames;
 		this.middleName = builder.middleName;
-		this.lastName = builder.lastName;
+		this.surname = builder.surname;
 	}
 	
 	public String getFirstName() {
@@ -26,14 +26,14 @@ public class Name {
 	}
 
 	public String getLastName() {
-		return lastName;
+		return surname;
 	}
 	
 	public static class Builder {
 		private String firstName;
 //		private List<String> middleNames;
 		private String middleName;
-		private String lastName;
+		private String surname;
 		
 		public Builder firstName(final String firstName) {
 			this.firstName = firstName;
@@ -50,8 +50,8 @@ public class Name {
 			return this;
 		}
 		
-		public Builder lastName(final String lastName) {
-			this.lastName = lastName;
+		public Builder surname(final String lastName) {
+			this.surname = lastName;
 			return this;
 		}
 		
