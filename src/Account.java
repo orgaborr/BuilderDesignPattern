@@ -29,7 +29,7 @@ public class Account {
 			return this;
 		}
 		
-		public Builder address(final Address adress) {
+		public Builder address(final Address address) {
 			this.address = address;
 			return this;
 		}
